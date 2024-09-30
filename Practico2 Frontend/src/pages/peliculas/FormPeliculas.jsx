@@ -18,7 +18,7 @@ const FormPersona = () => {
     const [listaDirectores, setListaDirectores] = useState([]);
 
     const onChangePhoto = (e) => {
-        setPhoto(e.target.files[0]);  // Asigna el archivo seleccionado al estado "photo"
+        setPhoto(e.target.files[0]);  
     };
 
     useEffect(() => {
@@ -69,11 +69,7 @@ const FormPersona = () => {
         }
 
         if (id) {
-            axios.put(`http://localhost:3000/pelicula/${id}`, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            })
+            axios.put(`http://localhost:3000/pelicula/${id}`, formData)
             .then(() => {
                 navigate('/peliculas');
             })
@@ -81,11 +77,7 @@ const FormPersona = () => {
                 console.error(error);
             });
         } else {
-            axios.post(`http://localhost:3000/pelicula`, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            })
+            axios.post(`http://localhost:3000/pelicula`, formData)
             .then(() => {
                 navigate('/peliculas');
             })
