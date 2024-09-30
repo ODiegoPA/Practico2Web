@@ -1,0 +1,25 @@
+.custom-navbar {
+    background-color: #fca311; /* Fondo naranja */
+    color: black; /* Color del texto */
+    padding: 15px 0; /* Ajusta el padding para mejor alineación vertical */
+}
+
+.custom-navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.custom-navbar-brand:hover {
+    color: #333; /* Cambiar color al pasar el mouse */
+}
+
+.navbar-nav .nav-link, .navbar-nav .dropdown-item {
+    color: black; /* Color de los enlaces */
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .dropdown-item:hover {
+    color: #333; /* Cambiar color al pasar el mouse */
+}
+
+
